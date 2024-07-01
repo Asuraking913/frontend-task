@@ -37,6 +37,8 @@ body {
     color: black;
     padding: .5em 2em;
     border-bottom: 2px solid rgba(0, 0, 0, 0.295);
+    /* position: fixed;
+    width: 100%; */
 }
 
 .logo {
@@ -83,24 +85,98 @@ ul.nav li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20em;
-    padding-left: 5em;
-    padding-right:5em ;
+    gap: 10em;
+    padding-left:  3em;
+    padding-right: 3em ;
     height: 100vh;
+}
+
+.hero .cont {
+    display: flex;
+    flex-flow: column;
+    gap: .5em;   
+}
+
+.img-cont {
+    background-color: var(--text-col);
+    border-radius: 50%;
+    transform: rotate(-45deg);;
+    height: 500px;
+    display: flex;
+    align-items: center;
 }
 
 .my-img {
     object-fit: cover;
-    border-radius: 2em;
-    box-shadow: 0px 0px 6px var(--text2-col);
+    border-radius: 50%;
+    /* box-shadow: 0px 0px 4px var(--text-col); */
+    transform: rotate(45deg);;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-family: lit;
+    color: var(--text-col);
 }
 
 .hero h4, p {
     font-size: 1.4em;
     font-family: pop;
+    width: 80%;
+}
+
+.hero div.link1 {
+    display: flex;
+    gap: 2em;
+}
+
+.hero a {
+    font-size: 1.2em;
+    text-decoration: none;
+    font-family: pop;
+    padding: 0.8em 2em;
+    background-color: var(--text-col);
+    color: var(--text2-col);
+    border-radius: 3em;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+}
+
+.hero a:last-child {
+    background-color: white;
+    border: 2px solid var(--text2-col);
+}
+
+.hero .cont2 {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    justify-content: center;
+
+}
+
+i {
+    font-size: 1.5em;
+}
+
+i.fa-facebook {
+    color: rgb(58, 143, 212);
+}
+
+i.fa-whatsapp {
+    color: rgb(96, 170, 21);
+}
+
+i.fa-linkedin {
+    color: rgb(58, 143, 212);
+}
+
+.main-cont {
+    display: flex;
+    flex-flow: column;
+    gap: 8em;
 }
