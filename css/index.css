@@ -7,6 +7,7 @@
 :root {
     --text-col: #ffc815;
     --text2-col: #000;
+    --shad: 0px 0px 3px black
 }
 
 @font-face {
@@ -31,12 +32,11 @@ body {
 
 .nav-section {
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: space-between;
-    color: white;
     color: black;
     padding: .5em 2em;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.295);
+    /* border-bottom: 2px solid rgba(0, 0, 0, 0.295); */
     position: fixed;
     width: 100%;
 }
@@ -58,7 +58,15 @@ body {
     color:var(--text-col)
 }
 
+.git:hover {
+    background-color: white;
+    border: 2px solid black;
+    transition-duration: 1s;
+}
 
+/* .link1 a:last-child {
+    background-color: red;
+} */
 
 ul.nav {
     display: flex;
@@ -123,22 +131,23 @@ ul.nav li a {
     color: var(--text-col);
 }
 
-.hero h4, p {
+.hero h4, .hero p {
     font-size: 1.4em;
     font-family: pop;
-    width: 80%;
+    width: 100%;
 }
 
 .hero div.link1 {
     display: flex;
-    gap: 2em;
+    gap: 1em;
 }
 
 .hero a {
-    font-size: 1.2em;
+    font-size: 1em;
     text-decoration: none;
     font-family: pop;
-    padding: 0.8em 2em;
+    padding: 0.5em 2em;
+    padding-bottom: 0.5em;
     background-color: var(--text-col);
     color: var(--text2-col);
     border-radius: 3em;
@@ -147,6 +156,7 @@ ul.nav li a {
     justify-content: center;
     align-items: center;
     gap: .5em;
+    /* margin: 1em; */
 }
 
 .hero a:last-child {
@@ -154,18 +164,26 @@ ul.nav li a {
     border: 2px solid var(--text2-col);
 }
 
+.hero a:last-child:hover {
+    background-color: var(--text-col);
+    border: 0px;
+    border: 2px solid var(--text2-col);
+    transition-duration: 1s;
+}
+
 .hero .cont2 {
     width: 50%;
     display: flex;
     align-items: center;
     gap: 1em;
-    justify-content: center;
+    justify-content: flex-start;
 
 }
 
 i {
     font-size: 1.5em;
 }
+
 
 i.fa-facebook {
     color: rgb(58, 143, 212);
@@ -182,20 +200,24 @@ i.fa-linkedin {
 .main-cont {
     display: flex;
     flex-flow: column;
-    gap: 8em;
+    gap: .8em;
 }
 
-@media screen and (min-width: 368px) {
+@media screen and (min-width: 300px) {
 
     .nav-section {
         position: absolute;
         top: 0;
+        padding: 0.5em 1em;
         left: 0;
+        align-items: center;
+    }
+
+    .slack-details {
+        font-family: pop;
     }
     
-    .nav-section ul.nav {
-        display: none;
-    }
+    
 
     i.menu {
         display: block;
@@ -203,13 +225,49 @@ i.fa-linkedin {
         width: 30px;
         background-size: cover;
         font-size: 1em;
-    background-image: url("../images/bars.svg");
-
+        background-image: url("../images/bars.svg");
+        cursor: pointer;
     }
 
     nav {
-        display: block;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.808);
+        width: 100%;
+        gap: 1em;
     }
+
+    ul.nav {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 1em;
+    }
+
+    ul.nav li {
+        padding: 1em 6em;
+        background-color: var(--text-col);
+        border-radius: 2em;
+        box-shadow: 0px 0px 10px black;
+    }
+
+    ul.nav a:hover {
+        text-decoration: none;
+    }
+
+    ul.nav li:hover, ul.nav li:active {
+        transform: scale(1.2);
+        transition-duration: 1s;
+    }
+
     
     .my-img {
         display: none;
@@ -217,15 +275,365 @@ i.fa-linkedin {
 
     /* section */
 
+
+    .cont2 {
+        width: 20%;
+        justify-content: flex-start;
+    }
+
     .hero {
         height: 100vh;
-        align-content: center;
+        /* padding-left:  1.5em;
+        padding-right: 1.5em ; */
     }
 
     .main-cont {
-        /* height: 100vh; */
+        /* 1.5ight: 100vh; */
         padding-top: 4em;
+        padding-left: 0em;
+        gap: 1em;
     }
+
+    .slack-details1 {
+        display: none;
+    }
+
+    section.hero1 h2 {
+        text-align: center;
+        font-family: pop;
+        text-shadow: var(--shad);
+        color: var(--text-col);
+    }
+    
+    section.hero1 {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .hero1 h3 {
+        color: white;
+        text-align: center;
+        margin-top: 1em;
+        font-family: pop;
+        color: var(--text-col);
+        text-shadow: var(--shad);
+    }
+
+    .hero1 p {
+        text-align: center;
+        font-family: pop;
+        line-height: 1.1em;
+    }
+
+    .hero1 .list {
+        margin-top: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        flex-flow: column;
+    }
+
+    .hero1 .list h3 {
+        font-family: pop;
+        color: white;
+        text-shadow: var(--shad);
+        text-align: center ;
+        
+    }
+
+    .hero1 ul {
+        margin-left: 2em;
+        /* list-style-type: none; */
+        font-weight: bold;
+        margin-top: 1em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        font-family: pop;
+        line-height: 1.1em;
+    }
+
+    section.foot {
+        background-color: var(--text-col);
+        padding: 1.5em 2em;
+        border-top-left-radius: 2em;
+        border-top-right-radius: 2em;
+        margin-top: 1em;
+    }
+
+    .foot ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        list-style-type: none;
+        justify-content: center;
+        align-content: center;
+        gap: .7em;
+    }
+
+    .foot a {
+        text-decoration: none;
+        font-family: pop;
+        color: white;
+        font-weight: bold;
+        text-shadow: var(--shad);
+    }
+
+    .foot a i, .foot i {
+        margin-left: .2em;
+        color: white;
+        text-shadow: var(--shad);
+        font-size: 1.1rem;
+        margin-bottom: .2em;
+    }
+
+    .foot h2 {
+        font-size: 1.2em;
+        text-wrap: nowrap;
+        font-family: pop;
+    }
+}
+
+@media  screen and (min-width: 768px) {
+
+    .nav-section ul.nav {
+        display: flex;
+    }
+
+    .nav-section {
+        position: absolute;
+        top: 0;
+        padding: 1em 4em;
+        left: 0;
+    }
+    
+
+    i.menu {
+        display: none;
+        background-image: none;
+    }
+
+    .img-cont {
+        display: block;
+    }
+
+    .img-cont-cont {
+        display: block;
+        position: absolute;
+        right: 8%;
+    }
+
+    .my-img {
+        display: block;
+    }
+
+    .hero {
+        justify-content: space-between;
+        /* gap: 0em; */
+        padding-left:  4em;
+        padding-right: 4em ;
+    }
+
+    .cont1 {
+        justify-content: center;
+        display: flex;
+        flex-flow: column;
+        gap: .5em;
+        font-family: pop;
+    }
+
+    .hero1 {
+        font-size: 1.5rem;
+        padding-left: 4em;
+        padding-right: 4em;
+        /* height: 70vh; */
+        padding-top: 0em;
+        padding-bottom: 2em;
+        display: flex;
+        flex-flow: column;
+        gap: .2em;
+        /* background-color: #ffc81548; */
+    }
+
+    .hero1 .about p {
+        font-size: 1.1rem;
+    }
+
+    .hero1 .goals1 {
+        margin-top: 0.5em;
+    }
+
+    .hero1 li {
+        font-size: 1.1rem;
+    }
+
+    .slack-details {
+        font-family: pop;
+        display: flex;
+        flex-flow: column;
+        gap: .5em;
+        text-align: center;
+        display: none;
+    }
+
+    .hero h4, .hero p {
+        font-size: 1.4em;
+        font-family: pop;
+        width: 70%;
+    }
+
+    .hero1 h2 {
+        font-family: pop;
+        color: white;
+        text-shadow: var(--shad);
+    }
+
+    .hero1 p {
+        font-size: 0.8em;
+        font-family: sans-serif;
+        line-height: 1em;
+        font-style: italic;
+        width: 95%;
+    }
+
+    .hero1 .link {
+        margin-top: 1.5em;
+    }
+
+    .hero1 .list ul {
+        padding-left: 2em;
+        list-style-type: disc;
+        font-size: 0.8em;
+        font-family: sans-serif;
+    }
+
+    .hero1 .list h3 {
+        font-family: pop;
+        font-size: 1em;
+        color: white;
+        text-shadow: var(--shad);
+    }
+
+    section.foot {
+        padding-left: 4em;
+        padding-right: 4em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        background-color: var(--text-col);
+    }
+
+    .foot ul {
+        display: flex;
+        width: 100%;
+        font-family: pop;
+        font-weight: bolder;
+        justify-content: center;
+        /* justify-content: space-between; */
+        gap: 6em;
+    }
+
+
+    .foot div ul i {
+        padding-right: .3em;
+    }
+
+    .foot a, .foot li {
+        text-decoration: none;
+        list-style-type: none;
+        color: var(--text2-col);
+        font-size: 1em;
+        color: white;
+        text-shadow: var(--shad);
+    }
+
+    .foot a:hover, .foot li:hover {
+        transform: scale(1.4);
+        transition-duration: 1s;
+    }
+
+    .foot i:hover {
+        transform: scale(1);
+        transition-duration: 1s;
+    }
+
+    i:hover, i:active {
+        transform: scale(1.4);
+        transition-duration: 0.5s;
+        cursor: pointer;
+    }
+
+    .link1 i {
+        transform: scale(1);
+        transition-duration: 0;
+        cursor: pointer;
+    }
+    
+    .slack-details1 {
+        display: block;
+        margin-top: 1em;
+        text-align: center;
+        font-family: pop;
+    }
+
+
+section.hero1 .about h2 {
+    /* text-align: center; */
+    font-family: pop;
+    color: var(--text-col);
+    text-shadow: var(--shad);
+    
+}
+
+section.hero1 .about p {
+    width: 50%;
+}
+
+.hero1 ul {
+    font-family: pop;
+    font-size: 0.8em;
+    line-height: 1.1em;
+}
+
+section.hero1 {
+    padding-left: 2em;
+    padding-right: 2em;
+    display: flex;
+    align-items: start;
+}
+
+.hero1 div h2 {
+    text-align: left;
+    font-family: poo;
+}
+
+.hero1 p {
+    text-align: left;
+}
+
+.hero1 .list {
+    margin-top: 1em;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    flex-flow: column;
+}
+
+.hero1 .list h3 {
+    font-family: pop;
+    color: white;
+    text-shadow: var(--shad);
+    text-align: center ;
+}
+
+.hero1 ul {
+    margin-left: 0em;
+    list-style-type: none;
+    font-weight: normal;
+    margin-top: 1em;
+    display: block;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
 }
 
 

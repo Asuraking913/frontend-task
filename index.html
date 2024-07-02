@@ -12,13 +12,13 @@
     <article id="main-container">
         <header>
             <div class="nav-section">
-                <a href="#" class="logo">AS<span>king</span></a>
-                <nav>
-                <i class="menu"></i>
+                <a href="#" class="logo">AS</a>
+                <i class="menu" id="menu-btn"></i>
+                <nav id="nav">
+                <i class="exit" id="exit-btn"></i>
                     <ul class="nav">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Skills</a></li>
                         <li><a href="#">Goals</a></li>
                         <li><a href="#">Github</a></li>
                     </ul>
@@ -31,27 +31,70 @@
                 <div class="main-cont">
                     <div class="cont">
                         <h4>Hello!</h4>
-                        <h1>I'm Israel Shedrack</h1>
-                        <p>A passionate software developer with 4years of experience</p>
+                        <h1>I'm <span data-testid="slackDisplayName">Israel Shedrack</span></h1>
+                        <p>Software developer with 4 years of experience building web applicaitons</p>
                         <div class="link1">
-                            <a href="#">Github <i class="fa-brands fa-github"></i></a>
-                            <a href="#">Goals</a>
+                            <a href="#" class="git">Github <i class="fa-brands fa-github"></i></a>
+                            <a href="#" class="goal">Goals</a>
                         </div>
                     </div>
-                    <div class="cont2">
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <i class="fa-brands fa-linkedin"></i>
+                    <div class="slack-details">
+                        <h3 >Current time: <span id="time-utc"></span></h3>
+                        <h3 >Current Date: <span id="utc-date"'"></span></h3>
+                        <h3 >Current Day: <span id="utc-day"></span></h3>
+                    </div>
+                    <div class="cont1"> 
+                        <div class="cont2">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="img-cont-cont">
-                    <div class="img-cont">
-                        <img src="images/img.jpg" class="my-img" width="350px" height=450px" alt="">
-                    </div>
+                        <div class="img-cont">
+                            <img src="images/img.jpg" class="my-img" width="300px" height=350px" alt="">
+                        
+                        </div>
+                        <div class="slack-details1">
+                            <h3 >Current time: <span id="time-utc1"></span></h3>
+                            <h3 >Current Date: <span id="utc-date1"></span></h3>
+                            <h3 >Current Day: <span id="utc-day1"></span></h3>
+                        </div>
+                </div>
+            </section>
+            <section class="hero1">
+                <div class="about">
+                    <h2>About Me</h2>
+                    <p>In my tech journey, my major goals is to have high problem solving skills that would help me to create solutions to real word problems. I look further in the future with hopes of landing a tech job along with working and collaborating with numerous people during development. I also hope to be able to explore the realm of hardware to give me detailed knowledge of how hardware components work</p>
+                </div>
+                    <h3 class="goals1">Future Goals in Tech</h3>
+                    <ul>
+                        <li>Web Development</li>
+                        <li>App development: Flutter</li>
+                        <li>GUI programming</li>
+                        <li>Automation Script Programming</li>
+                        <li>Hardware Configuration</li>
+                    </ul>
                 </div>
             </section>
         </main>
+        <footer>
+            <section class="foot">
+                <div>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+                        <li><i class="fa-brands fa-github"></i><a href="#">Github</a></li>
+                        <h2>Israel Shedrack</h2>
+                        <li><a href="#"><i class="fa-solid fa-question"></i>About</a></li>
+                        <li><i class="fa-sharp fa-solid fa-bullseye"></i><a href="#">Goals</a></li>
+                    </ul>
+                </div>
+            </section>
+        </footer>
     </article>
-    
+    <script src="/script/script.js">
+
+    </script>
 </body>
 </html>
