@@ -204,6 +204,14 @@ i.fa-linkedin {
     border: 0px none transparent;
 }
 
+.cont2 a:last-child:hover, .cont2 a i:hover {
+    border: 0px none tranparent;
+    background-color: transparent;
+    box-shadow: none;
+    text-decoration: none;
+    outline: none;
+}
+
 .main-cont {
     display: flex;
     flex-flow: column;
