@@ -20,11 +20,9 @@ function updateUTCDateTime() {
     const dayString = days[now.getUTCDay()];
   
     document.getElementById('time-utc').textContent = timeString;
-    document.getElementById('utc-date').textContent = dateString;
     document.getElementById('utc-day').textContent = dayString;
 
     document.getElementById('time-utc1').textContent = timeString;
-    document.getElementById('utc-date1').textContent = dateString;
     document.getElementById('utc-day1').textContent = dayString;
   }
   

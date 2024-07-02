@@ -109,10 +109,7 @@ ul.nav li a {
 }
 
 .img-cont {
-    background-color: var(--text-col);
     border-radius: 50%;
-    /* transform: rotate(-45deg);; */
-    /* height: 500px; */
     display: flex;
     align-items: center;
 
@@ -241,6 +238,7 @@ i.fa-linkedin {
         background-color: rgba(0, 0, 0, 0.808);
         width: 100%;
         gap: 1em;
+        z-index: 20;
     }
 
     ul.nav {
@@ -270,7 +268,13 @@ i.fa-linkedin {
 
     
     .my-img {
-        display: none;
+        /* display: none; */
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        right: 1em;
+        top: 70%;
+        border: 2px solid black;
     }
 
     /* section */
@@ -378,6 +382,12 @@ i.fa-linkedin {
         text-shadow: var(--shad);
     }
 
+    h3.email {
+        font-family: pop;
+        font-size: 1.1em;
+        margin-top: .2em;
+    }
+
     .foot a i, .foot i {
         margin-left: .2em;
         color: white;
@@ -397,6 +407,55 @@ i.fa-linkedin {
 
     .nav-section ul.nav {
         display: flex;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-flow: row;
+        height: 100%;
+        position: relative;
+        left: 0;
+        top: 0;
+        background-color: white;
+        width: 100%;
+        gap: 1em;
+    }
+
+    ul.nav {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 4em;
+    }
+
+    ul.nav li {
+        padding: 0em 0em;
+        background-color: transparent;
+        border-radius: 0em;
+        box-shadow: 0px 0px 0px transparent;
+    }
+
+    ul.nav a:hover {
+        text-decoration: underline;
+    }
+
+    ul.nav li:hover, ul.nav li:active {
+        text-decoration: underline;
+    }
+    
+
+    .my-img {
+        /* display: none; */
+        position: relative;
+        height: 350px;
+        width: 263px;
+        /* right: 1em;
+        top: 70%; */
+        border: 0px  none;
     }
 
     .nav-section {
@@ -566,12 +625,19 @@ i.fa-linkedin {
         transition-duration: 0;
         cursor: pointer;
     }
+
+    .small {
+        height: 250px;
+        width: 250px;
+        background-color: red;
+    }
     
     .slack-details1 {
         display: block;
         margin-top: 1em;
         text-align: center;
         font-family: pop;
+        padding: 1em;
     }
 
 
