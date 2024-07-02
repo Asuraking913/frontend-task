@@ -139,7 +139,7 @@ ul.nav li a {
     gap: 1em;
 }
 
-.hero a {
+.hero a.git, .hero a.goal {
     font-size: 1em;
     text-decoration: none;
     font-family: pop;
@@ -208,6 +208,43 @@ i.fa-linkedin {
         padding: 0.5em 1em;
         left: 0;
         align-items: center;
+    }
+
+    .hng, .keyword, .scrape {
+        position: absolute;
+        text-decoration: none;
+        font-size: 0.8em;
+        text-decoration: none;
+        background-color: var(--text-col);
+        color: var(--text2-col);
+        font-family: pop;
+        border-radius: 1em;
+        padding: .5em 1em;
+        font-weight: bold;
+    }
+
+    .hng {
+        top: 15%;
+        /* width: 150px; */
+        padding-left: 1em;
+        padding-right: 1em;
+        left: 30%;
+    }
+
+    .scrape {
+        top: 15%;
+        /* width: 150px; */
+        padding-left: 1em;
+        padding-right: 1em;
+        left: 70%;
+    }
+
+    .keyword {
+        top: 38%;
+        /* width: 150px; */
+        padding-left: 1em;
+        padding-right: 1em;
+        left: 70%;
     }
 
     .slack-details {
@@ -388,6 +425,10 @@ i.fa-linkedin {
         margin-top: .2em;
     }
 
+    h3.name {
+        font-family: pop;
+    }
+
     .foot a i, .foot i {
         margin-left: .2em;
         color: white;
@@ -422,6 +463,46 @@ i.fa-linkedin {
         width: 100%;
         gap: 1em;
     }
+
+    .hng, .keyword, .scrape {
+        position: absolute;
+        font-family: pop;
+        font-size: 1.1rem;
+
+        padding: 0.5em 2em;
+        padding-bottom: 0.5em;
+        background-color: var(--text-col);
+        color: var(--text2-col);
+        border-radius: 3em;
+        font-weight: bolder;
+        display: flex;
+
+    }
+
+
+    .hng:hover, .keyword:hover, .scrape:hover {
+        transform: scale(1.1);
+        transition-duration: 1s;
+    }
+
+    .hng {
+        top: 20%;
+        left: 56%;
+        box-shadow: 0px 0px 8px black;
+    }
+
+    .scrape {
+        top: 38%;
+        left: 42%;
+        box-shadow: 0px 0px 8px black;
+    }
+
+    .keyword {
+        top: 65%;
+        left: 55%;
+        box-shadow: 0px 0px 8px black;
+    }
+
 
     ul.nav {
         display: flex;
