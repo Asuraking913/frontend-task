@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth ;
+}
+
 :root {
     --text-col: #ffc815;
     --text2-col: #000;

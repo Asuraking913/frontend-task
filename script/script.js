@@ -39,7 +39,7 @@ menu.addEventListener("click", () => {
     menu.style.display = 'none'
 })
 
-nav.addEventListener("click", (e) => {
-    nav.style.display = 'none'
-    menu.style.display = 'block'
-})
+// nav.addEventListener("click", (e) => {
+//     nav.style.display = 'none'
+//     menu.style.display = 'block'
+// })
