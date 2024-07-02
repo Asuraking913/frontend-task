@@ -242,15 +242,24 @@ i.fa-linkedin {
     }
 
     .hng {
-        top: 15%;
+        top:14%;
         /* width: 150px; */
         padding-left: 1em;
         padding-right: 1em;
         left: 30%;
     }
 
+    .cont h1 {
+        font-size: 3em;
+    }
+
+    .cont p {
+        font-size: 1.2rem;
+        line-height: 1.1rem;
+    }
+
     .scrape {
-        top: 15%;
+        top:14%;
         /* width: 150px; */
         padding-left: 1em;
         padding-right: 1em;
@@ -258,7 +267,8 @@ i.fa-linkedin {
     }
 
     .keyword {
-        top: 38%;
+        top: 20%;
+        z-index: -1;
         /* width: 150px; */
         padding-left: 1em;
         padding-right: 1em;
@@ -460,12 +470,36 @@ i.fa-linkedin {
         text-wrap: nowrap;
         font-family: pop;
     }
+
+    .hero {
+        flex-flow: column;
+        height: auto;
+        padding-top: 4em;
+        padding-bottom: 4em;
+    }
 }
 
 @media  screen and (min-width: 768px) {
 
     .nav-section ul.nav {
         display: flex;
+    }
+
+    .cont p {
+        font-size: 1.2rem;
+        line-height: normal;
+
+    }
+
+    .img-cont-cont {
+        padding-top: 12em;
+    }
+
+    .hero {
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
     }
 
     nav {
@@ -578,6 +612,11 @@ i.fa-linkedin {
         display: block;
         position: absolute;
         right: 8%;
+        margin-top: -8em;
+    }
+
+    .new-cont {
+        background-color: red;
     }
 
     .my-img {
