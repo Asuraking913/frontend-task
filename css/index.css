@@ -181,6 +181,7 @@ ul.nav li a {
 
 }
 
+
 i {
     font-size: 1.5em;
 }
@@ -196,6 +197,11 @@ i.fa-whatsapp {
 
 i.fa-linkedin {
     color: rgb(58, 143, 212);
+    border-color: wheat;
+}
+
+.cont2 a:last-child {
+    border: 0px none transparent;
 }
 
 .main-cont {
